@@ -1,0 +1,208 @@
+/* Base Styles */
+:root {
+    --background-light: #f9f9f9;
+    --text-light: #333;
+    --header-bg-light: #4a90e2;
+    --header-text-light: #ffffff;
+    --button-bg-light: #007bff;
+    --button-hover-bg-light: #0056b3;
+    --border-light: #ddd;
+    --hover-bg-light: #e0e0e0;
+    /* Light gray for hover */
+    --button-hover-text-light: #ffffff;
+
+    --background-dark: #1e1e1e;
+    --text-dark: #e0e0e0;
+    --header-bg-dark: #333;
+    --header-text-dark: #e0e0e0;
+    --button-bg-dark: #66b3ff;
+    --button-hover-bg-dark: #3390ff;
+    --border-dark: #444;
+    --hover-bg-dark: #2b2b2b;
+    /* Darker gray for hover */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--header-bg-light);
+    color: var(--header-text-light);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+#themeToggle {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background-color: var(--button-bg-light);
+    color: var(--button-hover-text-light);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#themeToggle:hover {
+    background-color: var(--button-hover-bg-light);
+    transform: scale(1.05);
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+input {
+    padding: 0.75rem;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: var(--button-bg-light);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--button-bg-light);
+    color: var(--button-hover-text-light);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-light);
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 1rem;
+    border: 1px solid var(--border-light);
+    text-align: left;
+    transition: background-color 0.3s;
+}
+
+thead {
+    background-color: var(--header-bg-light);
+    color: var(--header-text-light);
+}
+
+tbody tr:hover {
+    background-color: var(--hover-bg-light);
+    /* Light gray for row hover */
+}
+
+.action-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.edit-button {
+    background-color: #4caf50;
+    /* Light green */
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+    /* Darker green */
+}
+
+.delete-button {
+    background-color: #f44336;
+    /* Light red */
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+    /* Darker red */
+}
+
+/* Dark Mode Styles */
+body[data-theme='dark'] {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+header[data-theme='dark'] {
+    background-color: var(--header-bg-dark);
+    color: var(--header-text-dark);
+}
+
+#themeToggle {
+    background-color: var(--button-bg-dark);
+}
+
+#themeToggle:hover {
+    background-color: var(--button-hover-bg-dark);
+}
+
+input:focus {
+    border-color: var(--button-bg-dark);
+    box-shadow: 0 0 5px rgba(102, 179, 255, 0.5);
+}
+
+button {
+    background-color: var(--button-bg-light);
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-light);
+}
+
+tbody tr:hover {
+    background-color: var(--hover-bg-light);
+    /* Darker gray for row hover */
+}
